@@ -28,7 +28,7 @@ def load_accounts():
 
 async def fetch_token(session, uid, password):
     """Fetch a single JWT from the external API"""
-    url = f"https://eat-to-jwt-opal.vercel.app/guest?uid={uid}&password={password}"
+    url = f"https://jwt-amber-three.vercel.app/token?uid={uid}&password={password}"
     try:
         async with session.get(url, timeout=10) as resp:
             if resp.status == 200:
